@@ -1,5 +1,5 @@
-FROM whiledo/ilias-base:latest
-MAINTAINER Kevin Krummenauer <kevin@whiledo.de>
+FROM torstens/ilias-base:latest
+MAINTAINER Torsten Schlabach <tschlabach@gmx.net>
 
 ENV httppath="http://localhost" \
     iliaspath="ilias" \

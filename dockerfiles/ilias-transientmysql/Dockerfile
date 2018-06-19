@@ -1,5 +1,5 @@
-FROM whiledo/ilias-configured:latest
-MAINTAINER Kevin Krummenauer <kevin@whiledo.de>
+FROM torstens/ilias-configured:latest
+MAINTAINER Torsten Schlabach <tschlabach@gmx.net>
 
 RUN apt-get update && apt-get install -y \
 	mysql-server
