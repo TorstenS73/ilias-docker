@@ -11,8 +11,8 @@ RUN apt-get update && apt-get install -y \
 	php7.2-gd \
 	php7.2-mysql \
 	php7.2-curl \
-	php-auth \
-	php-auth-http \
+#	php-auth \
+#	php-auth-http \
 	php7.2-xsl \
 	htmldoc \
 	imagemagick \
