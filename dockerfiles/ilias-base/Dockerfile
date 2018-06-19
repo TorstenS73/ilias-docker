@@ -1,4 +1,4 @@
-FROM whiledo/letsencrypt-apache-ubuntu
+FROM torstens/letsencrypt-apache-ubuntu
 MAINTAINER Torsten Schlabach <tschlabach@gmx.net>
 
 #Install packages as described here http://www.ilias.de/docu/goto_docu_pg_64272_367.html
