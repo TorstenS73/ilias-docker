@@ -11,6 +11,7 @@ RUN apt-get update && apt-get install -y \
 	php7.2-gd \
 	php7.2-mysql \
 	php7.2-curl \
+	php-pear \
 #	php-auth \
 #	php-auth-http \
 	php7.2-xsl \
@@ -19,6 +20,9 @@ RUN apt-get update && apt-get install -y \
 	mysql-client \
 	sendmail
 #	openjdk-7-jdk #not needed most times, install it with apt-get install -y openjdk-7-jdk if you need 
+
+RUN pear install Auth
+RUN pear install Auth_HTTP
 
 WORKDIR /data
 ADD resources /data/resources/base
