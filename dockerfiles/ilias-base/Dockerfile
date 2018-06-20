@@ -24,24 +24,24 @@ WORKDIR /data
 ADD resources /data/resources/base
 
 #Disable old settings
-RUN sed -i 's/max_execution_time/;max_execution_time/g' /etc/php7.2/apache2/php.ini \
-&& sed -i 's/memory_limit/;memory_limit/g' /etc/php7.2/apache2/php.ini \
+#RUN sed -i 's/max_execution_time/;max_execution_time/g' /etc/php7.2/apache2/php.ini \
+#&& sed -i 's/memory_limit/;memory_limit/g' /etc/php7.2/apache2/php.ini \
 
-&& sed -i 's/error_reporting/;error_reporting/g' /etc/php7.2/apache2/php.ini \
-&& sed -i 's/display_errors/;display_errors/g' /etc/php7.2/apache2/php.ini \
+#&& sed -i 's/error_reporting/;error_reporting/g' /etc/php7.2/apache2/php.ini \
+#&& sed -i 's/display_errors/;display_errors/g' /etc/php7.2/apache2/php.ini \
 
-&& sed -i 's/post_max_size/;post_max_size/g' /etc/php7.2/apache2/php.ini \
-&& sed -i 's/upload_max_filesize/;upload_max_filesize/g' /etc/php7.2/apache2/php.ini \
+#&& sed -i 's/post_max_size/;post_max_size/g' /etc/php7.2/apache2/php.ini \
+#&& sed -i 's/upload_max_filesize/;upload_max_filesize/g' /etc/php7.2/apache2/php.ini \
 
-&& sed -i 's/session.gc_probability/;session.gc_probability/g' /etc/php7.2/apache2/php.ini \
-&& sed -i 's/session.gc_divisor/;session.gc_divisor/g' /etc/php7.2/apache2/php.ini \
-&& sed -i 's/session.gc_maxlifetime/;session.gc_maxlifetime/g' /etc/php7.2/apache2/php.ini \
-&& sed -i 's/session.hash_function/;session.hash_function/g' /etc/php7.2/apache2/php.ini \
+#&& sed -i 's/session.gc_probability/;session.gc_probability/g' /etc/php7.2/apache2/php.ini \
+#&& sed -i 's/session.gc_divisor/;session.gc_divisor/g' /etc/php7.2/apache2/php.ini \
+#&& sed -i 's/session.gc_maxlifetime/;session.gc_maxlifetime/g' /etc/php7.2/apache2/php.ini \
+#&& sed -i 's/session.hash_function/;session.hash_function/g' /etc/php7.2/apache2/php.ini \
 
-&& sed -i 's/allow_url_fopen/;allow_url_fopen/g' /etc/php7.2/apache2/php.ini \
+#&& sed -i 's/allow_url_fopen/;allow_url_fopen/g' /etc/php7.2/apache2/php.ini \
 
 #Insert new settings, as described here http://www.ilias.de/docu/goto_docu_pg_6531_367.html
-&& cat /data/resources/base/phpinisettings >> /etc/php7.2/apache2/php.ini
+#&& cat /data/resources/base/phpinisettings >> /etc/php7.2/apache2/php.ini
 
 #Then download ilias, unzip it and restart apache2
 RUN wget https://github.com/ILIAS-eLearning/ILIAS/archive/v5.3.5.tar.gz -O /data/resources/base/ilias.tar.gz \
