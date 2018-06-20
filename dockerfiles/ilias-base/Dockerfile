@@ -11,6 +11,7 @@ RUN apt-get update && apt-get install -y \
 	php7.2-gd \
 	php7.2-mysql \
 	php7.2-curl \
+	php7.2-zip \
 	php-pear \
 #	php-auth \
 #	php-auth-http \
